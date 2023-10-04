@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+   
+    }
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    
+}  
+section div nav ul li a:hover{
+    opacity: 1; /**va creer une opacité au survol**/
+    color: black; /**couleur au survol du texte*
+    */
+}   
+section div nav ul li{
+    margin: 10px;
+}
+body {
+    background: blueviolet;/****fond d ecran couleur******/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;/***definir la hauteur du body**/
+}
+section {
+    height: 600px;/**hauteur de la section**/
+    width: 600px;/**largeur de la section*/
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+section div{
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;/**********pour controler le debordement du contenu***********/
+    position: relative;
+    
+}
+
+section>div>img{
+    width: 100%;/******fait 100% de la taille de son parent*******/
+    transition: 0.5s;/*******la transition se met sur l'element*******/
+    position: absolute;/************permet a la div enfnat (absolute) de dependre de son parent**********/
+    top:0;
+    left:0;
+}
+
+.up:hover img{
+    transform: translateY(-90%);
+
+}
+.down:hover img{
+    transform: translateY(90%);
+}
+.left:hover img{
+    transform: translateX(-90%);
+}
+.right:hover img{
+    transform: translateX(90%);
+}
